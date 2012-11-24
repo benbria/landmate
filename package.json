@@ -1,0 +1,16 @@
+{
+  "name": "landmate",
+  "version": "0.1.0",
+  "dependencies": {
+    "express": ">= 3.0.0",
+    "coffee-script": "1.4.0",
+    "connect-assets": ">= 2.2.1",
+    "stylus": ">= 0.30.1",
+    "nib": ">= 0.8.2",
+    "jade": ">= 0.27.7",
+    "markdown": ">= 0.4.0"
+  },
+  "engines": {
+    "node": "0.8.x"
+  }
+}
