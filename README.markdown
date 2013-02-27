@@ -9,10 +9,11 @@
 ## Local Development
 
 * `$ npm install` to install all required node modules
-* `$ foreman start` or `$ npm start` to start the server, visible at localhost:5000
+* `$ make work` or `$ make go` to start the server in dev or prod mode
+* View it at localhost:5000
 
 ## Heroku Deployment
 
 * `$ heroku create` to create your app
 * `$ git push heroku master` now and whenever you want to update the app
-* `$ heroku config:add NODE_ENV=production` to set the proper environment
+* `$ heroku config:add NODE_ENV=production` to set the environment to prod
