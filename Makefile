@@ -4,7 +4,7 @@ default: work
 work:
 	@if which foreman ; \
 		then foreman start ; \
-		else node bin/runDevServer.js ; \
+		else node server.js ; \
 	fi
 
 .PHONY: go
