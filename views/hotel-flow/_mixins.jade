@@ -1,18 +1,43 @@
 mixin submit-bar(elementId, elementText)
     .submit-bar(id=elementId)
-        .page-status ✔
         a.button(href='#')= elementText
 
 mixin dropdown-single
     .dropdown-group
-        a.dropdown-button Elysium
+        a.dropdown-button
+            i.icon-drop ▾
+            .button-label Select a room
         .dropdown-list.hidden
             ul
                 li
-                    a(href='#') Torus
+                    a.list-item(href='#')
+                        i.icon-check.hidden ✔
+                        span.item-label Lounge
                 li
-                    a(href='#') Torus
+                    a.list-item(href='#')
+                        i.icon-check.hidden ✔
+                        span.item-label Cafe
                 li
-                    a(href='#') Torus
+                    a.list-item(href='#')
+                        i.icon-check.hidden ✔
+                        span.item-label Gym
                 li
-                    a(href='#') Torus
+                    a.list-item(href='#')
+                        i.icon-check.hidden ✔
+                        span.item-label Pool
+                li
+                    a.list-item(href='#')
+                        i.icon-check.hidden ✔
+                        span.item-label Lobby
+                li
+                    a.list-item(href='#')
+                        i.icon-check.hidden ✔
+                        span.item-label Parking Garage
+                li
+                    a.list-item(href='#')
+                        i.icon-check.hidden ✔
+                        span.item-label Restaurant
+                li
+                    a.list-item(href='#')
+                        i.icon-check.hidden ✔
+                        span.item-label Sauna
