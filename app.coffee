@@ -30,6 +30,7 @@ app.configure 'production', () ->
 # Declare Express Routing & Listen
 
 app.get '/', routes.index
+app.get '/hotel-flow', routes.hotelFlow
 
 app.listen app.settings.port, () ->
   console.log("#{app.get 'name'} listening on port #{app.get 'port'} in #{app.settings.env} mode")

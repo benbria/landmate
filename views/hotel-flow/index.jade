@@ -1,0 +1,36 @@
+extends _layout
+
+include _mixins
+
+block append stylesheets
+    != css('hotel-flow/style')
+
+block content
+
+    #landing-page.page.hidden
+        a.logo(href='#')
+        // TODO: shake logo when tapped on (since it doesn’t do anything)
+
+        ul.customer-actions
+            li
+                a.goto-request(href='#') Create a request
+            li
+                a.goto-compliment(href='#') Give a compliment
+            li
+                a.goto-complaint(href='#') File a complaint
+
+    #request-page.page
+        mixin submit-bar('submit-request', 'Send request')
+
+        .input-groups
+            .input-group.question
+                h3 How can we help?
+
+                textarea
+
+            .input-group.contact
+                h3 Where can we reach you?
+
+                .inputdropdown-group
+                    input(type='text', placeholder="Room number")
+                    mixin dropdown-single

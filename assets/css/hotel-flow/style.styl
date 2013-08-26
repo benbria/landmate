@@ -1,0 +1,106 @@
+// 1. IMPORTS
+@import 'nib'
+@import '../lib/normalize'
+@import '../lib/augmentations'
+
+@import '../lib/variables.styl'
+
+*
+    box-sizing: border-box
+
+h3
+    font-size: font-base
+    margin: 0 0 5px
+
+input[type='text'],
+textarea
+    width: 100%
+    appearance: none
+    border-radius: radius-base
+    border: 1px solid #000
+    height: 70px
+    line-height: 20px
+    padding: 5 10px
+
+input[type='text']
+    height: 40px
+    padding: 0 10px
+
+.submit-bar
+    padding: 10px
+    background: black
+    overflow: hidden
+    height: 60px
+
+.button-status
+    float:left
+    width: 40px
+    height: 40px
+    text-align: center
+    line-height: 40px
+    font-size: font-base + 8
+
+.page-status
+    color: #fff
+    width: 30px
+    height: 40px
+    font-size: font-base + 8
+    text-align: center
+    line-height: 40px
+
+.button
+    display: inline-block
+    height: 40px
+    border: none
+    color: #000
+    text-decoration: none
+    font-size: font-base
+    font-weight: bold
+    position: relative
+    border-radius: radius-base
+    background: #fff
+    position: absolute
+    top: 10px
+    bottom: 40px
+    left: 50px
+    right: 10px
+    text-align: center
+    line-height: 40px
+
+.input-groups
+    position: absolute
+    top: 60px
+    left: 0
+    right: 0
+    bottom: 0
+    padding: 20px 10px 10px
+
+.input-group
+    padding-left: 40px
+    margin-bottom: 20px
+
+.dropdown-group
+    position: relative
+
+    .dropdown-button
+        display: block
+        border: 1px solid #000
+        border-radius: radius-base
+        height: 40px
+        line-height: 40px
+        padding: 0 10px
+
+        &:after
+            content: '▾'
+            position: absolute
+            top: 0
+            right: 10px
+            width
+
+.inputdropdown-group
+    input
+        border-radius: bottom 0
+
+    .dropdown-button
+        border-top: 0
+        border-radius: top 0
