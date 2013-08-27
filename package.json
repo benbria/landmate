@@ -11,6 +11,6 @@
     "markdown": ">= 0.4.0"
   },
   "engines": {
-    "node": "0.8.x"
+    "node": "0.10.x"
   }
 }
