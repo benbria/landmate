@@ -40,3 +40,10 @@ $ ->
   $('.close-page').click (e) ->
     $('#landing-page').removeClass('hidden')
     $(this).parent().parent().addClass('hidden')
+
+  $('.logo').click (e) ->
+    $(this).addClass('activated')
+    setTimeout ( ->
+      $('.logo').removeClass('activated')
+    ), 600
+    e.preventDefault()
