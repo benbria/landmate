@@ -5,12 +5,22 @@
 @import '../lib/mixins.styl'
 @import '../lib/variables.styl'
 
-@keyframes blink
+@keyframes zoom
     0%
         opacity: 0
         transform: scale(10)
     100%
         opacity: 1
+        transform: scale(1)
+
+@keyframes pop
+    0%
+        opacity: 0
+        transform: scale(0)
+    80%
+        opacity: 1
+        transform: scale(1.1)
+    100%
         transform: scale(1)
 
 *
@@ -80,15 +90,17 @@ input[type='text']
     margin-bottom: 20px
 
 .dropdown-group
-    position: relative
 
     .dropdown-button
+        position: relative
         display: block
         border: 1px solid #000
         border-radius: radius-base
         height: 40px
         line-height: 40px
         padding: 0 10px
+        color: #000
+        text-decoration: none
 
     .icon-drop
         width: 20px
@@ -103,40 +115,44 @@ input[type='text']
         font-style: normal
         transition: all 0.2s ease-in
 
-    &.activated
-        box-shadow: 0 0 8px rgba(0, 0, 0, .5)
-
-        .icon-drop
-            background: #000
-            transform: rotate(180deg)
-            color: #fff
-
-        .dropdown-button
-            border-radius: bottom 0
-
     .dropdown-list
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        box-shadow: 0 -4px 4px rgba(0, 0, 0, .5)
+        border: 1px solid #000
+        background: rgba(0, 0, 0, .5)
+        overflow: hidden
+        overflow-y: scroll
+        animation: pop 0.4s ease-in
+        animation-iteration-count: 1
+
         ul
-            margin: 0
+            background: #fff
+            margin: 20px 20px 0
             padding: 0
             list-style: none
-            border: 1px solid #000
             border-top: 0
-            border-radius: bottom radius-base
             transition: height 1s ease-in
             clear: both
 
         li
             margin: 0
 
-        a
-            display: block
-            padding: 5px 10px
-            text-decoration: none
-            color: #000
-
     .list-item
-        &.activated .icon-check
-            animation: blink 0.2s linear
+        display: block
+        padding: 5px 10px
+        text-decoration: none
+        color: #000
+        transition: all 0.2s linear
+
+        &.activated
+            color: blue
+
+            .icon-check
+                animation: zoom 0.2s linear
 
         .icon-check
             float: right
@@ -144,6 +160,15 @@ input[type='text']
             height: 20px
             text-align: center
             line-height: 20px
+
+    .close-button
+        margin: 0 20px 20px
+        display: block
+        padding: 5px 10px
+        text-decoration: none
+        color: #000
+        background: #ccc
+        border-radius: bottom radius-base
 
 .inputdropdown-group
 

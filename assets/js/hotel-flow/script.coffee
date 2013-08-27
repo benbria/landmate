@@ -3,14 +3,10 @@ $ ->
   console.log "ok"
 
   $('.dropdown-button').click (e) ->
-    if $(this).parent().hasClass('activated')
-      $(this).parent().removeClass('activated')
-      $('.dropdown-list').addClass('hidden')
-    else
-      $(this).parent().addClass('activated')
       $('.dropdown-list').removeClass('hidden')
 
   $('.list-item').click (e) ->
+    $('.list-item').removeClass('activated')
     $('.icon-check').addClass('hidden')
     textReplace = $(this).find('.item-label').text()
     $(this).addClass('activated')
@@ -18,9 +14,10 @@ $ ->
     setTimeout ( ->
       $(this).removeClass('activated')
       $(this).addClass('hidden')
-      $('.dropdown-group').removeClass('activated')
       $('.dropdown-list').addClass('hidden')
       $('.button-label').text(textReplace)
-      console.log(textReplace)
     ), 500
     e.preventDefault()
+
+  $('.close-button').click (e) ->
+    $(this).parent().addClass('hidden')
