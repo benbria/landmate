@@ -2,8 +2,23 @@
 $ ->
   console.log "ok"
 
+  $('.goto-request').click (e) ->
+    $('#landing-page').addClass('hidden')
+    $('#request-page').removeClass('hidden')
+    return false
+
+  $('.goto-compliment').click (e) ->
+    $('#landing-page').addClass('hidden')
+    $('#compliment-page').removeClass('hidden')
+    return false
+
+  $('.goto-complaint').click (e) ->
+    $('#landing-page').addClass('hidden')
+    $('#complaint-page').removeClass('hidden')
+    return false
+
   $('.dropdown-button').click (e) ->
-      $('.dropdown-list').removeClass('hidden')
+    $('.dropdown-list').removeClass('hidden')
 
   $('.list-item').click (e) ->
     $('.list-item').removeClass('activated')
@@ -21,3 +36,7 @@ $ ->
 
   $('.close-button').click (e) ->
     $(this).parent().addClass('hidden')
+
+  $('.close-page').click (e) ->
+    $('#landing-page').removeClass('hidden')
+    $(this).parent().parent().addClass('hidden')

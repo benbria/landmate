@@ -7,9 +7,12 @@ block append stylesheets
 
 block content
 
-    #landing-page.page.hidden
+    #landing-page.page
         a.logo(href='#')
+            img(src='logo.png' width='75' height='64')
         // TODO: shake logo when tapped on (since it doesn’t do anything)
+
+        p Using Loop™ you can have our stuff fulfill a request for you. Or you can let us know how we’ve been doing.
 
         ul.customer-actions
             li
@@ -19,7 +22,7 @@ block content
             li
                 a.goto-complaint(href='#') File a complaint
 
-    #request-page.page
+    #request-page.page.hidden
         mixin submit-bar('submit-request', 'Send request')
 
         .input-groups
@@ -30,6 +33,38 @@ block content
 
             .input-group.contact
                 h3 Where can we reach you?
+
+                .inputdropdown-group
+                    input(type='text', placeholder="Room number")
+                    mixin dropdown-single
+
+    #compliment-page.page.hidden
+        mixin submit-bar('submit-request', 'Send compliment')
+
+        .input-groups
+            .input-group.question
+                h3 What’s on your mind?
+
+                textarea
+
+            .input-group.contact
+                h3 Is there a location relevant to your comment?
+
+                .inputdropdown-group
+                    input(type='text', placeholder="Room number")
+                    mixin dropdown-single
+
+    #complaint-page.page.hidden
+        mixin submit-bar('submit-request', 'Send complaint')
+
+        .input-groups
+            .input-group.question
+                h3 What’s on your mind?
+
+                textarea
+
+            .input-group.contact
+                h3 Is there a location relevant to your comment?
 
                 .inputdropdown-group
                     input(type='text', placeholder="Room number")

@@ -1,6 +1,7 @@
 mixin submit-bar(elementId, elementText)
     .submit-bar(id=elementId)
-        a.button(href='#')= elementText
+        a.close-page(href='#') ×
+        a.submit-button(href='#')= elementText
 
 mixin dropdown-single
     .dropdown-group
@@ -73,4 +74,4 @@ mixin dropdown-single
                     a.list-item(href='#')
                         i.icon-check.hidden ✔
                         span.item-label The Cricketer's Pub
-            a.close-button(href='#') Cancel
+            a.close-list(href='#') Cancel

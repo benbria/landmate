@@ -27,9 +27,16 @@
     box-sizing: border-box
     webkit-reset()
 
+.logo img
+    display: block
+    margin: 20px auto
+
 h3
     font-size: font-base
     margin: 0 0 5px
+
+p
+    margin: 0 20px
 
 input[type='text'],
 textarea
@@ -44,6 +51,21 @@ textarea
 input[type='text']
     height: 40px
     padding: 0 10px
+
+.customer-actions
+    list-style: none
+    margin: 0
+    padding: 0
+
+    li
+        margin: 20px
+    a
+        display: block
+        background: #000
+        color: #fff
+        text-decoration: none
+        padding: 10px
+        border-radius: radius-base
 
 .submit-bar
     padding: 10px
@@ -63,7 +85,7 @@ input[type='text']
     line-height: 40px
     font-size: font-base + 8
 
-.button
+.submit-button
     display: inline-block
     height: 40px
     border: none
@@ -77,10 +99,21 @@ input[type='text']
     position: absolute
     top: 10px
     bottom: 40px
-    left: 10px
+    left: 60px
     right: 10px
     text-align: center
     line-height: 40px
+
+.close-page
+    display: inline-block
+    width: 40px
+    height: 40px
+    line-height: 34px
+    text-decoration: none
+    text-align: center
+    font-size: 36px
+    border-radius: radius-base
+    color: #fff
 
 .input-groups
     padding: 20px 10px 0
@@ -161,7 +194,7 @@ input[type='text']
             text-align: center
             line-height: 20px
 
-    .close-button
+    .close-list
         margin: 0 20px 20px
         display: block
         padding: 5px 10px
