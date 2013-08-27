@@ -35,8 +35,8 @@ block content
                 h3 Where can we reach you?
 
                 .inputdropdown-group
-                    input(type='text', placeholder="Room number")
-                    mixin dropdown-single
+                    input(type='text', placeholder="Room #, phone # or email address")
+                    mixin dropdown-single('Select a room')
 
     #compliment-page.page.hidden
         mixin submit-bar('submit-request', 'Send compliment')
@@ -51,8 +51,8 @@ block content
                 h3 Is there a location relevant to your comment?
 
                 .inputdropdown-group
-                    input(type='text', placeholder="Room number")
-                    mixin dropdown-single
+                    input(type='text', placeholder="Room #, phone # or email address")
+                    mixin dropdown-single('Select a room')
 
     #complaint-page.page.hidden
         mixin submit-bar('submit-request', 'Send complaint')
@@ -66,6 +66,11 @@ block content
             .input-group.contact
                 h3 Is there a location relevant to your comment?
 
-                .inputdropdown-group
-                    input(type='text', placeholder="Room number")
-                    mixin dropdown-single
+                .dualdropdown-group
+                    mixin dropdown-single('Marriott')
+                    mixin dropdown-single('Select a room')
+
+            .input-group.contact
+                h3 How can we reach you?
+
+                input(type='text', placeholder="Room number")

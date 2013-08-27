@@ -3,11 +3,11 @@ mixin submit-bar(elementId, elementText)
         a.close-page(href='#') ×
         a.submit-button(href='#')= elementText
 
-mixin dropdown-single
+mixin dropdown-single(text)
     .dropdown-group
         a.dropdown-button(href='#')
             i.icon-drop ▾
-            .button-label Select a room
+            .button-label= text
         .dropdown-list.hidden
             ul
                 li

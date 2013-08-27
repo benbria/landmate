@@ -72,6 +72,7 @@ textarea
     border-radius: radius-base
     border: 1px solid #000
     height: 70px
+    font-size: 14px
     line-height: 20px
     padding: 5 10px
 
@@ -149,6 +150,14 @@ input[type='text']
 .input-group
     margin-bottom: 20px
 
+.dualdropdown-group
+    .dropdown-group:first-child .dropdown-button
+        border-radius: bottom 0
+        border-bottom: 0
+
+    .dropdown-group:last-child .dropdown-button
+        border-radius: top 0
+
 .dropdown-group
 
     .dropdown-button
@@ -158,6 +167,7 @@ input[type='text']
         border-radius: radius-base
         height: 40px
         line-height: 40px
+        font-size: 14px
         padding: 0 10px
         color: #000
         text-decoration: none
@@ -176,6 +186,7 @@ input[type='text']
         transition: all 0.2s ease-in
 
     .dropdown-list
+        z-index: 4
         position: absolute
         top: 0
         left: 0
