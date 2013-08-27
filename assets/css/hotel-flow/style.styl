@@ -1,0 +1,214 @@
+// 1. IMPORTS
+@import 'nib'
+@import '../lib/normalize'
+@import '../lib/augmentations'
+@import '../lib/mixins.styl'
+@import '../lib/variables.styl'
+
+@keyframes zoom
+    0%
+        opacity: 0
+        transform: scale(10)
+    100%
+        opacity: 1
+        transform: scale(1)
+
+@keyframes pop
+    0%
+        opacity: 0
+        transform: scale(0)
+    80%
+        opacity: 1
+        transform: scale(1.1)
+    100%
+        transform: scale(1)
+
+*
+    box-sizing: border-box
+    webkit-reset()
+
+.logo img
+    display: block
+    margin: 20px auto
+
+h3
+    font-size: font-base
+    margin: 0 0 5px
+
+p
+    margin: 0 20px
+
+input[type='text'],
+textarea
+    width: 100%
+    appearance: none
+    border-radius: radius-base
+    border: 1px solid #000
+    height: 70px
+    line-height: 20px
+    padding: 5 10px
+
+input[type='text']
+    height: 40px
+    padding: 0 10px
+
+.customer-actions
+    list-style: none
+    margin: 0
+    padding: 0
+
+    li
+        margin: 20px
+    a
+        display: block
+        background: #000
+        color: #fff
+        text-decoration: none
+        padding: 10px
+        border-radius: radius-base
+
+.submit-bar
+    padding: 10px
+    background: black
+    overflow: hidden
+    height: 60px
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+
+.button-status
+    float:left
+    width: 40px
+    height: 40px
+    text-align: center
+    line-height: 40px
+    font-size: font-base + 8
+
+.submit-button
+    display: inline-block
+    height: 40px
+    border: none
+    color: #000
+    text-decoration: none
+    font-size: font-base
+    font-weight: bold
+    position: relative
+    border-radius: radius-base
+    background: #fff
+    position: absolute
+    top: 10px
+    bottom: 40px
+    left: 60px
+    right: 10px
+    text-align: center
+    line-height: 40px
+
+.close-page
+    display: inline-block
+    width: 40px
+    height: 40px
+    line-height: 34px
+    text-decoration: none
+    text-align: center
+    font-size: 36px
+    border-radius: radius-base
+    color: #fff
+
+.input-groups
+    padding: 20px 10px 0
+    margin-top: 60px
+
+.input-group
+    margin-bottom: 20px
+
+.dropdown-group
+
+    .dropdown-button
+        position: relative
+        display: block
+        border: 1px solid #000
+        border-radius: radius-base
+        height: 40px
+        line-height: 40px
+        padding: 0 10px
+        color: #000
+        text-decoration: none
+
+    .icon-drop
+        width: 20px
+        height: 20px
+        background: #fff
+        border-radius: 99px
+        position: absolute
+        text-align: center
+        line-height: 20px
+        top: 10px
+        right: 10px
+        font-style: normal
+        transition: all 0.2s ease-in
+
+    .dropdown-list
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        box-shadow: 0 -4px 4px rgba(0, 0, 0, .5)
+        border: 1px solid #000
+        background: rgba(0, 0, 0, .5)
+        overflow: hidden
+        overflow-y: scroll
+        animation: pop 0.4s ease-in
+        animation-iteration-count: 1
+
+        ul
+            background: #fff
+            margin: 20px 20px 0
+            padding: 0
+            list-style: none
+            border-top: 0
+            transition: height 1s ease-in
+            clear: both
+
+        li
+            margin: 0
+
+    .list-item
+        display: block
+        padding: 5px 10px
+        text-decoration: none
+        color: #000
+        transition: all 0.2s linear
+
+        &.activated
+            color: blue
+
+            .icon-check
+                animation: zoom 0.2s linear
+
+        .icon-check
+            float: right
+            width: 20px
+            height: 20px
+            text-align: center
+            line-height: 20px
+
+    .close-list
+        margin: 0 20px 20px
+        display: block
+        padding: 5px 10px
+        text-decoration: none
+        color: #000
+        background: #ccc
+        border-radius: bottom radius-base
+
+.inputdropdown-group
+
+    input
+        border-radius: bottom 0
+
+    .dropdown-button
+        border-top: 0
+        border-radius: top 0
+

@@ -5,11 +5,15 @@ html
         title #{title} - #{settings.name}
         meta(name='description', content='')
         meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-
+        meta(name='apple-mobile-web-app-capable', content='yes')
         block stylesheets
             != css('style')
 
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js')
+        script.
+            document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     body
-        block content
-        != js('script')
+        .container
+            block content
+        != js('jquery.transit.min.js')
+        != js('hotel-flow/script')
